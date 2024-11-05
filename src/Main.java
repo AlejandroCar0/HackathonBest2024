@@ -17,7 +17,7 @@ public class Main {
         Truck truck12 = new Truck(1000, new String[] {"left"},251);
 
         Truck[] arrayTrucks = new Truck[] {truck1, truck2, truck3, truck4, truck5, truck6, truck7, truck8, truck9, truck10, truck11, truck12};*/
-
+        /*
         Truck truck1 = new Truck(2000, new String[] {"top"}, 250);
         Truck truck2 = new Truck(1500, new String[] {"right", "left"}, 200);
         Truck truck3 = new Truck(1800, new String[] {"left", "top"}, 150);
@@ -81,7 +81,7 @@ public class Main {
                 truck41, truck42, truck43, truck44, truck45, truck46, truck47, truck48, truck49, truck50
         };
 
-
+        */
 
         /*
         Truck camion1 = new Truck(1250, new String[]{"top", "right"}, 250);
@@ -196,8 +196,8 @@ public class Main {
         Truck truck100 = new Truck(1400, new String[]{"right"}, 150);
 */
 
-/*
-        SET DE DATAS 1:
+
+        //DATASET 1:
 
         Truck truck1 = new Truck(2200, new String[]{"top"}, 250);
         Truck truck2 = new Truck(1500, new String[]{"right", "left"}, 200);
@@ -299,15 +299,128 @@ public class Main {
         Truck truck98 = new Truck(1700, new String[]{"inductive"}, 120);
         Truck truck99 = new Truck(2100, new String[]{"top"}, 150);
         Truck truck100 = new Truck(2300, new String[]{"right"}, 170);
-*/
 
-        // Truck[] arrayTrucks = new Truck[]{truck1, truck2, truck3, truck4, truck5, truck6, truck7, truck8, truck9, truck10, truck11, truck12, truck13, truck14, truck15, truck16, truck17, truck18, truck19, truck20, truck21, truck22, truck23, truck24, truck25, truck26, truck27, truck28, truck29, truck30, truck31, truck32, truck33, truck34, truck35, truck36, truck37, truck38, truck39, truck40, truck41, truck42, truck43, truck44, truck45, truck46, truck47, truck48, truck49, truck50, truck51, truck52, truck53, truck54, truck55, truck56, truck57, truck58, truck59, truck60, truck61, truck62, truck63, truck64, truck65, truck66, truck67, truck68, truck69, truck70, truck71, truck72, truck73, truck74, truck75, truck76, truck77, truck78, truck79, truck80, truck81, truck82, truck83, truck84, truck85, truck86, truck87, truck88, truck89, truck90, truck91, truck92, truck93, truck94, truck95, truck96, truck97, truck98, truck99, truck100};
+
+        Truck[] arrayTrucks = new Truck[]{truck1, truck2, truck3, truck4, truck5, truck6, truck7, truck8, truck9, truck10, truck11, truck12, truck13, truck14, truck15, truck16, truck17, truck18, truck19, truck20, truck21, truck22, truck23, truck24, truck25, truck26, truck27, truck28, truck29, truck30, truck31, truck32, truck33, truck34, truck35, truck36, truck37, truck38, truck39, truck40, truck41, truck42, truck43, truck44, truck45, truck46, truck47, truck48, truck49, truck50, truck51, truck52, truck53, truck54, truck55, truck56, truck57, truck58, truck59, truck60, truck61, truck62, truck63, truck64, truck65, truck66, truck67, truck68, truck69, truck70, truck71, truck72, truck73, truck74, truck75, truck76, truck77, truck78, truck79, truck80, truck81, truck82, truck83, truck84, truck85, truck86, truck87, truck88, truck89, truck90, truck91, truck92, truck93, truck94, truck95, truck96, truck97, truck98, truck99, truck100};
+
+        /*
+        // Dataset 4 (tamaño 150)
+        List<Truck> listTrucks = new ArrayList<>();
+        for(int i = 0; i < 3; i++) {
+            listTrucks.add(new Truck(2100, new String[]{"top", "right"}, 275));
+            listTrucks.add(new Truck(1300, new String[]{"left"}, 180));
+            listTrucks.add(new Truck(1950, new String[]{"right", "inductive"}, 190));
+            listTrucks.add(new Truck(1600, new String[]{"top", "inductive"}, 250));
+            listTrucks.add(new Truck(900, new String[]{"right"}, 125));
+            listTrucks.add(new Truck(1400, new String[]{"top", "left"}, 165));
+            listTrucks.add(new Truck(1000, new String[]{"left"}, 95));
+            listTrucks.add(new Truck(2300, new String[]{"inductive"}, 300));
+            listTrucks.add(new Truck(1500, new String[]{"right", "top"}, 205));
+            listTrucks.add(new Truck(1250, new String[]{"top"}, 150));
+            listTrucks.add(new Truck(1800, new String[]{"left", "inductive"}, 225));
+            listTrucks.add(new Truck(1600, new String[]{"right"}, 180));
+            listTrucks.add(new Truck(2000, new String[]{"top"}, 275));
+            listTrucks.add(new Truck(1150, new String[]{"left", "top"}, 100));
+            listTrucks.add(new Truck(2500, new String[]{"top", "inductive"}, 325));
+            listTrucks.add(new Truck(1400, new String[]{"right", "left"}, 160));
+            listTrucks.add(new Truck(1700, new String[]{"left"}, 210));
+            listTrucks.add(new Truck(1200, new String[]{"inductive"}, 120));
+            listTrucks.add(new Truck(1900, new String[]{"top"}, 265));
+            listTrucks.add(new Truck(1600, new String[]{"left", "top"}, 180));
+            listTrucks.add(new Truck(1350, new String[]{"right"}, 155));
+            listTrucks.add(new Truck(1450, new String[]{"top", "left"}, 170));
+            listTrucks.add(new Truck(2200, new String[]{"top", "inductive"}, 300));
+            listTrucks.add(new Truck(1050, new String[]{"left"}, 110));
+            listTrucks.add(new Truck(1750, new String[]{"right", "inductive"}, 200));
+            listTrucks.add(new Truck(1900, new String[]{"top", "left"}, 260));
+            listTrucks.add(new Truck(1300, new String[]{"inductive"}, 135));
+            listTrucks.add(new Truck(1600, new String[]{"top"}, 185));
+            listTrucks.add(new Truck(1500, new String[]{"right", "left"}, 175));
+            listTrucks.add(new Truck(2000, new String[]{"left", "top"}, 245));
+            listTrucks.add(new Truck(1200, new String[]{"right"}, 115));
+            listTrucks.add(new Truck(2100, new String[]{"top", "inductive"}, 270));
+            listTrucks.add(new Truck(1300, new String[]{"left"}, 140));
+            listTrucks.add(new Truck(1750, new String[]{"top", "right"}, 230));
+            listTrucks.add(new Truck(1400, new String[]{"inductive"}, 165));
+            listTrucks.add(new Truck(1850, new String[]{"top", "left"}, 215));
+            listTrucks.add(new Truck(1050, new String[]{"left", "inductive"}, 105));
+            listTrucks.add(new Truck(1950, new String[]{"right"}, 240));
+            listTrucks.add(new Truck(1700, new String[]{"top"}, 195));
+            listTrucks.add(new Truck(1300, new String[]{"right", "inductive"}, 140));
+            listTrucks.add(new Truck(2100, new String[]{"top", "left"}, 255));
+            listTrucks.add(new Truck(1200, new String[]{"inductive"}, 125));
+            listTrucks.add(new Truck(1900, new String[]{"right"}, 210));
+            listTrucks.add(new Truck(1800, new String[]{"top"}, 230));
+            listTrucks.add(new Truck(1350, new String[]{"left", "inductive"}, 150));
+            listTrucks.add(new Truck(1600, new String[]{"top", "right"}, 185));
+            listTrucks.add(new Truck(2000, new String[]{"left"}, 250));
+            listTrucks.add(new Truck(1500, new String[]{"top", "inductive"}, 190));
+            listTrucks.add(new Truck(1400, new String[]{"right"}, 165));
+            listTrucks.add(new Truck(1550, new String[]{"left"}, 180));
+        }
+        */
+/*
+        // DATASET 5 (tamaño 50)
+        List<Truck> listTrucks = new ArrayList<>();
+        listTrucks.add(new Truck(2100, new String[]{"top", "right"}, 275));
+        listTrucks.add(new Truck(1300, new String[]{"left"}, 180));
+        listTrucks.add(new Truck(1950, new String[]{"right", "inductive"}, 190));
+        listTrucks.add(new Truck(1600, new String[]{"top", "inductive"}, 250));
+        listTrucks.add(new Truck(900, new String[]{"right"}, 125));
+        listTrucks.add(new Truck(1400, new String[]{"top", "left"}, 165));
+        listTrucks.add(new Truck(1000, new String[]{"left"}, 95));
+        listTrucks.add(new Truck(2300, new String[]{"inductive"}, 300));
+        listTrucks.add(new Truck(1500, new String[]{"right", "top"}, 205));
+        listTrucks.add(new Truck(1250, new String[]{"top"}, 150));
+        listTrucks.add(new Truck(1800, new String[]{"left", "inductive"}, 225));
+        listTrucks.add(new Truck(1600, new String[]{"right"}, 180));
+        listTrucks.add(new Truck(2000, new String[]{"top"}, 275));
+        listTrucks.add(new Truck(1150, new String[]{"left", "top"}, 100));
+        listTrucks.add(new Truck(2500, new String[]{"top", "inductive"}, 325));
+        listTrucks.add(new Truck(1400, new String[]{"right", "left"}, 160));
+        listTrucks.add(new Truck(1700, new String[]{"left"}, 210));
+        listTrucks.add(new Truck(1200, new String[]{"inductive"}, 120));
+        listTrucks.add(new Truck(1900, new String[]{"top"}, 265));
+        listTrucks.add(new Truck(1600, new String[]{"left", "top"}, 180));
+        listTrucks.add(new Truck(1350, new String[]{"right"}, 155));
+        listTrucks.add(new Truck(1450, new String[]{"top", "left"}, 170));
+        listTrucks.add(new Truck(2200, new String[]{"top", "inductive"}, 300));
+        listTrucks.add(new Truck(1050, new String[]{"left"}, 110));
+        listTrucks.add(new Truck(1750, new String[]{"right", "inductive"}, 200));
+        listTrucks.add(new Truck(1900, new String[]{"top", "left"}, 260));
+        listTrucks.add(new Truck(1300, new String[]{"inductive"}, 135));
+        listTrucks.add(new Truck(1600, new String[]{"top"}, 185));
+        listTrucks.add(new Truck(1500, new String[]{"right", "left"}, 175));
+        listTrucks.add(new Truck(2000, new String[]{"left", "top"}, 245));
+        listTrucks.add(new Truck(1200, new String[]{"right"}, 115));
+        listTrucks.add(new Truck(2100, new String[]{"top", "inductive"}, 270));
+        listTrucks.add(new Truck(1300, new String[]{"left"}, 140));
+        listTrucks.add(new Truck(1750, new String[]{"top", "right"}, 230));
+        listTrucks.add(new Truck(1400, new String[]{"inductive"}, 165));
+        listTrucks.add(new Truck(1850, new String[]{"top", "left"}, 215));
+        listTrucks.add(new Truck(1050, new String[]{"left", "inductive"}, 105));
+        listTrucks.add(new Truck(1950, new String[]{"right"}, 240));
+        listTrucks.add(new Truck(1700, new String[]{"top"}, 195));
+        listTrucks.add(new Truck(1300, new String[]{"right", "inductive"}, 140));
+        listTrucks.add(new Truck(2100, new String[]{"top", "left"}, 255));
+        listTrucks.add(new Truck(1200, new String[]{"inductive"}, 125));
+        listTrucks.add(new Truck(1900, new String[]{"right"}, 210));
+        listTrucks.add(new Truck(1800, new String[]{"top"}, 230));
+        listTrucks.add(new Truck(1350, new String[]{"left", "inductive"}, 150));
+        listTrucks.add(new Truck(1600, new String[]{"top", "right"}, 185));
+        listTrucks.add(new Truck(2000, new String[]{"left"}, 250));
+        listTrucks.add(new Truck(1500, new String[]{"top", "inductive"}, 190));
+        listTrucks.add(new Truck(1400, new String[]{"right"}, 165));
+        listTrucks.add(new Truck(1550, new String[]{"left"}, 180));
+        Truck[] arrayTrucks = listTrucks.toArray(new Truck[0]);
+
+ */
         printData(arrayTrucks);
         reto(arrayTrucks);
     }
 
     private static void reto(Truck[] trucks) {
-        for(int i = 1; i <= 6; i++){
+        for(int i = 0; i <= 6; i++){
             System.out.println("\nOrden " + i + ":");
             Truck[] trucks2 = new Truck[trucks.length];
             System.arraycopy(trucks, 0, trucks2, 0, trucks.length);

@@ -6,13 +6,13 @@ public class ListaIsletas {
 
     public ListaIsletas(){
         listaIsleta = new ArrayList<>();
-        for(int i = 0; i< 5;i++)
+        for(int i = 0; i < 5; i++)
             listaIsleta.add(new Isleta(new String[] {"right","left","top"},250));
         for(int i = 0;i < 7; i++)
             listaIsleta.add(new Isleta(new String[] {"right","top"},150));
         for(int i = 0;i < 3; i++)
             listaIsleta.add(new Isleta(new String[] {"top","inductive"},110));
-        for(int i = 0; i< 5;i++)
+        for(int i = 0; i < 5; i++)
             listaIsleta.add(new Isleta(new String[] {"left","top","inductive"},60));
     }
 
