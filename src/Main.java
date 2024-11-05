@@ -196,7 +196,7 @@ public class Main {
         Truck truck100 = new Truck(1400, new String[]{"right"}, 150);
 */
 
-
+/*
         //DATASET 1:
 
         Truck truck1 = new Truck(2200, new String[]{"top"}, 250);
@@ -302,7 +302,7 @@ public class Main {
 
 
         Truck[] arrayTrucks = new Truck[]{truck1, truck2, truck3, truck4, truck5, truck6, truck7, truck8, truck9, truck10, truck11, truck12, truck13, truck14, truck15, truck16, truck17, truck18, truck19, truck20, truck21, truck22, truck23, truck24, truck25, truck26, truck27, truck28, truck29, truck30, truck31, truck32, truck33, truck34, truck35, truck36, truck37, truck38, truck39, truck40, truck41, truck42, truck43, truck44, truck45, truck46, truck47, truck48, truck49, truck50, truck51, truck52, truck53, truck54, truck55, truck56, truck57, truck58, truck59, truck60, truck61, truck62, truck63, truck64, truck65, truck66, truck67, truck68, truck69, truck70, truck71, truck72, truck73, truck74, truck75, truck76, truck77, truck78, truck79, truck80, truck81, truck82, truck83, truck84, truck85, truck86, truck87, truck88, truck89, truck90, truck91, truck92, truck93, truck94, truck95, truck96, truck97, truck98, truck99, truck100};
-
+*/
         /*
         // Dataset 4 (tamaño 150)
         List<Truck> listTrucks = new ArrayList<>();
@@ -415,29 +415,20 @@ public class Main {
         Truck[] arrayTrucks = listTrucks.toArray(new Truck[0]);
 
  */
-        printData(arrayTrucks);
+        List<Truck> trucks = new ArrayList<>();
+
+
+        // Ejemplo de camiones y isletas
+        trucks.add(new Truck(100, new String[] { "right" }, 50 ));
+        trucks.add(new Truck(120, new String[] { "top"}, 60));
+        trucks.add(new Truck(90, new String[] { "inductive"}, 55 ));
+
+        Truck[] arrayTrucks = trucks.toArray(new Truck[0]);
         reto(arrayTrucks);
     }
 
     private static void reto(Truck[] trucks) {
-        for(int i = 0; i <= 6; i++){
-            System.out.println("\nOrden " + i + ":");
-            Truck[] trucks2 = new Truck[trucks.length];
-            System.arraycopy(trucks, 0, trucks2, 0, trucks.length);
-            Optimizer optimizer = new Optimizer(i);
-            optimizer.asignarTrucksOptimo(trucks2);
-        }
-    }
-
-    private static void printData(Truck[] trucks) {
-        System.out.println("\nCapacidad de batería de los camiones:");
-        for(Truck truck : trucks){
-            System.out.print(truck.getBattery_capacity() + ",");
-        }
-        System.out.println("\n\nVelocidad de carga de los camiones:");
-        for(Truck truck : trucks){
-            System.out.print(truck.getCharging_speed() + ",");
-        }
-        System.out.println();
+        Optimizer optimizer = new Optimizer(1);
+        optimizer.asignarTrucksOptimo(trucks);
     }
 }

@@ -1,11 +1,16 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ListaIsletas {
     private final List<Isleta> listaIsleta;
 
     public ListaIsletas(){
         listaIsleta = new ArrayList<>();
+        insertarIsletas();
+        sortIsletas();
+        System.out.println();
+    }
+
+    private void insertarIsletas(){
         for(int i = 0; i < 5; i++)
             listaIsleta.add(new Isleta(new String[] {"right","left","top"},250));
         for(int i = 0;i < 7; i++)
@@ -14,6 +19,10 @@ public class ListaIsletas {
             listaIsleta.add(new Isleta(new String[] {"top","inductive"},110));
         for(int i = 0; i < 5; i++)
             listaIsleta.add(new Isleta(new String[] {"left","top","inductive"},60));
+    }
+
+    private void sortIsletas(){
+        listaIsleta.sort(Comparator.comparingInt(Isleta::getPotencia).reversed());
     }
 
     public void asignarIsleta(Truck truck){

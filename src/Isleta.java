@@ -72,4 +72,8 @@ public class Isleta {
     public double getTotalConsumido(){
         return this.totalConsumido;
     }
+
+    public int getPotencia(){
+        return this.potencia;
+    }
 }
