@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Main {
+    private final ListaIsletas listaIsletas = new ListaIsletas();
     public static void main(String[] args) {
-        ListaIsletas l = new ListaIsletas();
         /*Truck truck1 = new Truck(1250, new String[] {"top"},250);
         Truck truck2 = new Truck(1000, new String[] {"right","left","inductive"},125);
         Truck truck3 = new Truck(1250, new String[] {"top","left"},137);
@@ -17,7 +17,7 @@ public class Main {
         Truck truck12 = new Truck(1000, new String[] {"left"},251);
 
         Truck[] arrayTrucks = new Truck[] {truck1, truck2, truck3, truck4, truck5, truck6, truck7, truck8, truck9, truck10, truck11, truck12};*/
-/*
+
         Truck truck1 = new Truck(2000, new String[] {"top"}, 250);
         Truck truck2 = new Truck(1500, new String[] {"right", "left"}, 200);
         Truck truck3 = new Truck(1800, new String[] {"left", "top"}, 150);
@@ -80,7 +80,7 @@ public class Main {
                 truck31, truck32, truck33, truck34, truck35, truck36, truck37, truck38, truck39, truck40,
                 truck41, truck42, truck43, truck44, truck45, truck46, truck47, truck48, truck49, truck50
         };
-*/
+
 
 
         /*
@@ -91,7 +91,9 @@ public class Main {
         Truck[] arrayTrucks = new Truck[]{camion1, camion2, camion3};
 
          */
-        /*
+/*
+        DATASET 2 (tamaño 100):
+
         Truck truck1 = new Truck(2000, new String[]{"top"}, 250);
         Truck truck2 = new Truck(1500, new String[]{"right", "left"}, 200);
         Truck truck3 = new Truck(1800, new String[]{"left", "top"}, 150);
@@ -192,8 +194,11 @@ public class Main {
         Truck truck98 = new Truck(1700, new String[]{"left"}, 180);
         Truck truck99 = new Truck(2400, new String[]{"top"}, 400);
         Truck truck100 = new Truck(1400, new String[]{"right"}, 150);
+*/
 
-         */
+/*
+        SET DE DATAS 1:
+
         Truck truck1 = new Truck(2200, new String[]{"top"}, 250);
         Truck truck2 = new Truck(1500, new String[]{"right", "left"}, 200);
         Truck truck3 = new Truck(1800, new String[]{"left", "top"}, 150);
@@ -294,41 +299,32 @@ public class Main {
         Truck truck98 = new Truck(1700, new String[]{"inductive"}, 120);
         Truck truck99 = new Truck(2100, new String[]{"top"}, 150);
         Truck truck100 = new Truck(2300, new String[]{"right"}, 170);
+*/
 
-
-
-        Truck[] arrayTrucks = new Truck[]{truck1, truck2, truck3, truck4, truck5, truck6, truck7, truck8, truck9, truck10, truck11, truck12, truck13, truck14, truck15, truck16, truck17, truck18, truck19, truck20, truck21, truck22, truck23, truck24, truck25, truck26, truck27, truck28, truck29, truck30, truck31, truck32, truck33, truck34, truck35, truck36, truck37, truck38, truck39, truck40, truck41, truck42, truck43, truck44, truck45, truck46, truck47, truck48, truck49, truck50, truck51, truck52, truck53, truck54, truck55, truck56, truck57, truck58, truck59, truck60, truck61, truck62, truck63, truck64, truck65, truck66, truck67, truck68, truck69, truck70, truck71, truck72, truck73, truck74, truck75, truck76, truck77, truck78, truck79, truck80, truck81, truck82, truck83, truck84, truck85, truck86, truck87, truck88, truck89, truck90, truck91, truck92, truck93, truck94, truck95, truck96, truck97, truck98, truck99, truck100};
-        Main.mejorOptimizacion(arrayTrucks,l);
+        // Truck[] arrayTrucks = new Truck[]{truck1, truck2, truck3, truck4, truck5, truck6, truck7, truck8, truck9, truck10, truck11, truck12, truck13, truck14, truck15, truck16, truck17, truck18, truck19, truck20, truck21, truck22, truck23, truck24, truck25, truck26, truck27, truck28, truck29, truck30, truck31, truck32, truck33, truck34, truck35, truck36, truck37, truck38, truck39, truck40, truck41, truck42, truck43, truck44, truck45, truck46, truck47, truck48, truck49, truck50, truck51, truck52, truck53, truck54, truck55, truck56, truck57, truck58, truck59, truck60, truck61, truck62, truck63, truck64, truck65, truck66, truck67, truck68, truck69, truck70, truck71, truck72, truck73, truck74, truck75, truck76, truck77, truck78, truck79, truck80, truck81, truck82, truck83, truck84, truck85, truck86, truck87, truck88, truck89, truck90, truck91, truck92, truck93, truck94, truck95, truck96, truck97, truck98, truck99, truck100};
+        printData(arrayTrucks);
+        reto(arrayTrucks);
     }
-    public static void mejorOptimizacion(Truck[] trucks,ListaIsletas l){
-        //Arrays.sort(trucks, Comparator.comparingInt(Truck::getBattery_capacity).reversed());
-        //Arrays.sort(trucks, Comparator.comparingInt(Truck::getCharging_speed).reversed());
-        //Arrays.sort(trucks, Comparator.comparingInt(Truck::getBattery_capacity));
-        //Arrays.sort(trucks, Comparator.comparingInt(Truck::getCharging_speed));
 
-        Arrays.sort(trucks, (t1, t2) ->      // es la más óptima, orden descendente de los tiempos mínimos de carga
-                Integer.compare(
-                        t2.getBattery_capacity() / t2.getCharging_speed(),
-                        t1.getBattery_capacity() / t1.getCharging_speed()
-                )
-        );
-
-        /*
-        Arrays.sort(trucks, (t1, t2) ->
-                Integer.compare(
-                        t1.getBattery_capacity() / t1.getCharging_speed(),
-                        t2.getBattery_capacity() / t2.getCharging_speed()
-                )
-        );
-
-         */
-        for(Truck truck : trucks){
-            l.asignarIsleta(truck);
+    private static void reto(Truck[] trucks) {
+        for(int i = 1; i <= 6; i++){
+            System.out.println("\nOrden " + i + ":");
+            Truck[] trucks2 = new Truck[trucks.length];
+            System.arraycopy(trucks, 0, trucks2, 0, trucks.length);
+            Optimizer optimizer = new Optimizer(i);
+            optimizer.asignarTrucksOptimo(trucks2);
         }
-        System.out.println("\nCAMIONES CARGADOS: "+trucks.length);
-        System.out.println("##################################");
-        System.out.printf("TIEMPO DE CARGA: %.2f horas",l.getMaxTiempoLiberacion());
-        System.out.println("\n##################################");
-        System.out.printf("kW CONSUMIDOS: %.2f kW\n",l.getTotalConsumido());
+    }
+
+    private static void printData(Truck[] trucks) {
+        System.out.println("\nCapacidad de batería de los camiones:");
+        for(Truck truck : trucks){
+            System.out.print(truck.getBattery_capacity() + ",");
+        }
+        System.out.println("\n\nVelocidad de carga de los camiones:");
+        for(Truck truck : trucks){
+            System.out.print(truck.getCharging_speed() + ",");
+        }
+        System.out.println();
     }
 }

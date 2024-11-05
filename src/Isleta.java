@@ -1,6 +1,6 @@
 public class Isleta {
-    private String[] puertos;
-    private int potencia;
+    private final String[] puertos;
+    private final int potencia;
     private double instanteLiberacion;
     private double totalConsumido;
 
