@@ -1,32 +1,30 @@
-import java.util.List;
-
 public class Truck {
-    private int batteryCapacity;
-    private String[] chargingPort;
-    private int chargingSpeed;
+    private int battery_capacity;
+    private String[] charging_port;
+    private int charging_speed;
 
-    public Truck(int batteryCapacity, String[] chargingPort, int chargingSpeed) {
-        this.batteryCapacity = batteryCapacity;
-        this.chargingPort = chargingPort;
-        this.chargingSpeed = chargingSpeed;
+    public Truck(int battery_capacity, String[] charging_port, int charging_speed) {
+        this.battery_capacity = battery_capacity;
+        this.charging_port = charging_port;
+        this.charging_speed = charging_speed;
     }
 
 
     @Override
     public String toString() {
         return "Truck {" +
-                "batteryCapacity=" + batteryCapacity +
-                ", chargingPort=" + chargingPort +
-                ", chargingSpeed=" + chargingSpeed +
+                "batteryCapacity=" + battery_capacity +
+                ", chargingPort=" + charging_port +
+                ", chargingSpeed=" + charging_speed +
                 '}';
     }
-    public int getBatteryCapacity(){
-        return this.batteryCapacity;
+    public int getBattery_capacity(){
+        return this.battery_capacity;
     }
-    public String[] getCharginPort(){
-        return this.chargingPort;
+    public String[] getCharging_port(){
+        return this.charging_port;
     }
-    public int getChargingSpeed(){
-        return this.chargingSpeed;
+    public int getCharging_speed(){
+        return this.charging_speed;
     }
 }

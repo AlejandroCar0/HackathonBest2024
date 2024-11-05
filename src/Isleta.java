@@ -12,7 +12,7 @@ public class Isleta {
     }
 
     public boolean puedeCargarDirecta(Truck t){
-        for(String direccion: t.getCharginPort()){
+        for(String direccion: t.getCharging_port()){
             if(!direccion.equals("inductive") && contienePuerto(direccion))
                 return true;
         }
@@ -20,7 +20,7 @@ public class Isleta {
     }
 
     public boolean puedeCargar(Truck t){
-        for(String direccion: t.getCharginPort()){
+        for(String direccion: t.getCharging_port()){
             if(contienePuerto(direccion))
                 return true;
         }
@@ -35,9 +35,9 @@ public class Isleta {
         double velocidadCarga = this.potencia;
         if(!puedeCargarDirecta(t))
             velocidadCarga *= 0.7;
-        velocidadCarga = Math.min(velocidadCarga, t.getChargingSpeed());
+        velocidadCarga = Math.min(velocidadCarga, t.getCharging_speed());
 
-        return t.getBatteryCapacity()/velocidadCarga;
+        return t.getBattery_capacity()/velocidadCarga;
     }
 
     public boolean contienePuerto(String puerto){
@@ -58,7 +58,7 @@ public class Isleta {
     }
 
     private void setTotalConsumido(Truck t){
-        double consumido = t.getBatteryCapacity();
+        double consumido = t.getBattery_capacity();
         if(!puedeCargarDirecta(t))
             this.totalConsumido += consumido / 0.7;
         else
